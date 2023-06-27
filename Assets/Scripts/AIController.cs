@@ -12,7 +12,12 @@ public class AIController : MonoBehaviour
 
     private void Start()
     {
-      _AIanimatorController.PlayAIRun();   
+        StartCoroutine(AnimationCoroutine());
+    }
+    IEnumerator AnimationCoroutine()
+    {
+        yield return new WaitForSeconds (2);
+        _AIanimatorController.PlayAIRun();
     }
     private void Awake()
     {

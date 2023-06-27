@@ -26,4 +26,16 @@ public class RotatingPlatform : MonoBehaviour
         blue.transform.Rotate(0f, 0f, 30 * Time.deltaTime, Space.Self);
 
     }
+
+
+    private void OnCollisionStay(Collision other) {
+        if(other.gameObject.name.Equals("Boy")){
+            Debug.Log("deneme!");
+            other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.left * 50);
+        }
+    }
+
+    void FixedUpdate() {
+        
+    }
 }
