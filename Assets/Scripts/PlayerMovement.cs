@@ -22,7 +22,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        CharacterMove();    
+        CharacterMove();   
+        
+        if(transform.position.y <= -0.15f)  // Falling from the ground
+        {
+            gameObject.transform.position = new Vector3 (0f, 0f, -6.6f);
+        }      
     }
 
     private void CharacterMove()
@@ -45,4 +50,14 @@ public class PlayerMovement : MonoBehaviour
 
         _rigidbody.MovePosition(_rigidbody.position + _moveVector);
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if(other.gameObject.name.Equals("FinishPlatform"))
+        {
+            Debug.Log("Finished");
+            
+        }    
+
+    } 
 }

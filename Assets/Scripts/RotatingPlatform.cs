@@ -30,9 +30,9 @@ public class RotatingPlatform : MonoBehaviour
 
     private void OnCollisionStay(Collision other) {
         if(other.gameObject.name.Equals("Boy")){
-            Debug.Log("deneme!");
+            Debug.Log("Left Force!");
             other.gameObject.GetComponent<Rigidbody>().AddForce(Vector3.left * 50);
-        }
+        }   //left-right-left test:
     }
 
     void FixedUpdate() {

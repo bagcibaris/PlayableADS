@@ -9,6 +9,8 @@ public class RotatorRotate : MonoBehaviour
     public Transform rotator2;
     public Transform rotator3;
     public Transform rotator4;
+    public Transform rotator5;
+
 
 
     void Start()
@@ -17,6 +19,8 @@ public class RotatorRotate : MonoBehaviour
         rotator2 = RotatingStick.transform.Find("Rotator (2)");
         rotator3 = RotatingStick.transform.Find("Rotator (3)");
         rotator4 = RotatingStick.transform.Find("Rotator (4)");
+        rotator5 = RotatingStick.transform.Find("Rotator (5)");
+
 
     }
 
@@ -26,5 +30,7 @@ public class RotatorRotate : MonoBehaviour
         rotator2.transform.Rotate(0f, -25 * Time.deltaTime, 0f, Space.Self);
         rotator3.transform.Rotate(0f, 25 * Time.deltaTime, 0f, Space.Self);
         rotator4.transform.Rotate(0f, -25 * Time.deltaTime, 0f, Space.Self);
+        rotator5.transform.Rotate(0f, 25 * Time.deltaTime, 0f, Space.Self);
+
     }
 }

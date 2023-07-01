@@ -17,21 +17,4 @@ public class StickForce : MonoBehaviour
             other.gameObject.GetComponent<Rigidbody>().AddForce(-other.contacts[0].normal * 20,ForceMode.Impulse);
         }
     }
-
-    // private void OnCollisionStay(Collision other) {
-    //             if(other.gameObject.name.Equals("Boy"))
-    //     {
-    //         other.gameObject.GetComponent<Rigidbody>().AddForce(-other.gameObject.GetComponent<Rigidbody>().velocity.normalized * 250,ForceMode.Impulse);
-    //     } 
-    // }
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 }
