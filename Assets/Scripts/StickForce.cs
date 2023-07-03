@@ -10,7 +10,7 @@ public class StickForce : MonoBehaviour
         if(other.gameObject.name.Equals("Boy"))
         {
             // other.gameObject.GetComponent<Rigidbody>().AddForce(-other.gameObject.GetComponent<Rigidbody>().velocity.normalized * 50,ForceMode.Impulse);
-            other.gameObject.GetComponent<Rigidbody>().AddForce(-other.contacts[0].normal * 30,ForceMode.Impulse);
+            other.gameObject.GetComponent<Rigidbody>().AddForce(-other.contacts[0].normal * 900,ForceMode.Impulse);
         }    
         else if(other.gameObject.name.Equals("AIGirl"))
         {

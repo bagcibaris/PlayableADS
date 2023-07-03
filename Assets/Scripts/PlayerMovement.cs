@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody _rigidbody;
     private Vector3 _moveVector;
+    public GameObject draw;
 
     private void Awake()
     {
@@ -56,7 +57,8 @@ public class PlayerMovement : MonoBehaviour
         if(other.gameObject.name.Equals("FinishPlatform"))
         {
             Debug.Log("Finished");
-            
+            gameObject.transform.position = new Vector3 (0, 0, 15);
+            draw.SetActive(true);
         }    
 
     } 

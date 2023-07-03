@@ -29,8 +29,10 @@ public class Coin : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-                if(other.gameObject.name.Equals("Boy")){
-                            isCollected = true;
-        }
+            if(other.gameObject.name.Equals("Boy"))
+            {
+                isCollected = true;
+                CoinCount.instance.AddCoin();
+            }
     }
 }
